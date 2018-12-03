@@ -162,7 +162,7 @@ export default {
     }
 
 
-    .gui-card {
+    .card {
         position: relative;
         display: inline-block;
         width: 250px;
@@ -175,13 +175,13 @@ export default {
         -webkit-transform-origin: center left;
         transform-origin: center left;
     }
-    .gui-card__img {
+    .card__img {
         width: 250px;
         height: 140.625px;
         -o-object-fit: cover;
         object-fit: cover;
     }
-    .gui-card__details {
+    .card__details {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -194,15 +194,15 @@ export default {
         -webkit-transition: 450ms opacity;
         transition: 450ms opacity;
     }
-    .gui-card__details:after,
-    .gui-card__details:before {
+    .card__details:after,
+    .card__details:before {
         content: '';
         position: absolute;
         top: 50%;
         left: 50%;
         display: #000;
     }
-    .gui-card__details:after {
+    .card__details:after {
         margin-top: -25px;
         margin-left: -25px;
         width: 50px;
@@ -214,7 +214,7 @@ export default {
         background: rgba(0,0,0,0.5);
         z-index: 1;
     }
-    .gui-card__details:before {
+    .card__details:before {
         content: '▶';
         left: 0;
         width: 100%;
@@ -224,10 +224,10 @@ export default {
         text-align: center;
         z-index: 2;
     }
-    .gui-card:hover .gui-card__details {
+    .card:hover .card__details {
         opacity: 1;
     }
-    .gui-card__title {
+    .card__title {
         position: absolute;
         bottom: 0;
         padding: 10px;
@@ -236,15 +236,15 @@ export default {
         -webkit-transform: translate3d(-62.5px, 0, 0);
         transform: translate3d(-62.5px, 0, 0);
     }
-    .row__inner:hover .gui-card {
+    .row__inner:hover .card {
         opacity: 0.3;
     }
-    .row__inner:hover .gui-card:hover {
+    .row__inner:hover .card:hover {
         -webkit-transform: scale(1.5);
         transform: scale(1.5);
         opacity: 1;
     }
-    .gui-card:hover ~ .gui-card {
+    .card:hover ~ .card {
         -webkit-transform: translate3d(125px, 0, 0);
         transform: translate3d(125px, 0, 0);
     }

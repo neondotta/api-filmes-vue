@@ -1,10 +1,10 @@
 <template>
-    <div class="gui-card" v-bind:style="efeitoClick" v-on:click="clickEfeito()" v-on:mouseout="removeClickEfeito()">
-        <div class="gui-card__media">
-            <img class="gui-card__img" v-bind:src="imagem" alt=""  />
+    <div class="card" v-bind:style="efeitoClick" v-on:click="clickEfeito()" v-on:mouseout="removeClickEfeito()">
+        <div class="card__media">
+            <img class="card__img" v-bind:src="imagem" alt=""  />
         </div>
-        <div class="gui-card__details">
-            <div class="gui-card__title">
+        <div class="card__details">
+            <div class="card__title">
                 {{titulo}}
             </div>
         </div>
