@@ -8,7 +8,7 @@
         <div ref="scroller" class="row">
             <div class="row__inner">
 
-                <filme v-for="filme in filmes" v-bind:key="filme.id" v-bind:titulo="filme.titulo" v-bind:imagem="titulo.imagem"></filme>
+                <filme v-for="filme in filmes" v-bind:key="filme.id" v-bind:titulo="filme.titulo" v-bind:descricao="filme.descricao" v-bind:imagem="titulo.imagem"></filme>
 
             </div>
         </div>

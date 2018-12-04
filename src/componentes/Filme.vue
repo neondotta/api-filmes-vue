@@ -7,13 +7,16 @@
             <div class="card__title">
                 {{titulo}}
             </div>
+            <div class="card__description">
+                {{descricao}}
+            </div>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['titulo', 'imagem'],
+        props: ['titulo', 'imagem', 'descricao'],
         data() {
           return {
               efeitoClick: null

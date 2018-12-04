@@ -1,40 +1,40 @@
 <template>
-  <div class="contain">
-    <categoria v-for="categoria in categorias" v-bind:key="categoria.id" v-bind:titulo="categoria.titulo" v-bind:filmes="categoria.filmes"></categoria>
-  </div>
+    <div class="contain">
+        <categoria v-for="categoria in categorias" v-bind:key="categoria.id" v-bind:titulo="categoria.titulo" v-bind:filmes="categoria.filmes"></categoria>
+    </div>
 </template>
 
 <script>
 
-//import teste from './componentes/teste.vue';
-import Categoria from './componentes/Categoria.vue';
+    //import teste from './componentes/teste.vue';
+    import Categoria from '../componentes/Categoria.vue';
 
-export default {
-    name: 'app',
-    components: {
-        Categoria
-    },
-    beforeCreate() {
+    export default {
+        name: 'app',
+        components: {
+            Categoria
+        },
+        beforeCreate() {
 
-    },
-    created() {
-      this.$http.get('http://localhost:3000/categorias').then(response => {
+        },
+        created() {
+            this.$http.get('http://localhost:3000/categorias').then(response => {
 
-          this.categorias = response.body;
+                this.categorias = response.body;
 
-      });
-    },
-    beforeMount() {
+            });
+        },
+        beforeMount() {
 
-    },
-    data () {
-        return {
-            nomeProjeto: 'NetFlix com VueJS',
-            intervalo: null,
-            categorias: []
+        },
+        data () {
+            return {
+                nomeProjeto: 'NetFlix com VueJS',
+                intervalo: null,
+                categorias: []
+            }
         }
     }
-}
 </script>
 
 <style lang="scss">
@@ -220,18 +220,30 @@ export default {
         width: 100%;
         font-size: 30px;
         margin-left: 7px;
-        margin-top: -10px;
+        margin-top: -17px;
         text-align: center;
         z-index: 2;
     }
     .card:hover .card__details {
         opacity: 1;
     }
+
     .card__title {
+        position: absolute;
+        bottom: 15px;
+        padding: 10px;
+    }
+
+    .card__description {
         position: absolute;
         bottom: 0;
         padding: 10px;
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
+
     .row__inner:hover {
         -webkit-transform: translate3d(-62.5px, 0, 0);
         transform: translate3d(-62.5px, 0, 0);
